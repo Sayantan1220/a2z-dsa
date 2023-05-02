@@ -1,5 +1,6 @@
 /*
 Given an unsorted array of size N, use selection sort to sort arr[] in increasing order.
+https://practice.geeksforgeeks.org/problems/selection-sort/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=selection-sort
 
 1. We will select the range of the unsorted array using a loop (say i) that indicates the starting index of the range.
 2. The loop will run forward from 0 to n-1. The value i = 0 means the range is from 0 to n-1, and similarly, i = 1 means the range is from 1 to n-1, and so on.
