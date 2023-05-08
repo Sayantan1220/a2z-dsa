@@ -1,3 +1,11 @@
+/*
+Second Largest
+https://practice.geeksforgeeks.org/problems/second-largest3735/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=second-largest
+
+TC: O(n)
+SC: O(1)
+ */
+
 package Array;
 
 public class SecondLargest {
