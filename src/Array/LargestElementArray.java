@@ -1,3 +1,11 @@
+/*
+Given an array A[] of size n. The task is to find the largest element in it.
+https://practice.geeksforgeeks.org/problems/largest-element-in-array4009/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=largest-element-in-array
+
+TC: O(n)
+SC: O(1)
+ */
+
 package Array;
 
 public class LargestElementArray {
@@ -11,13 +19,6 @@ public class LargestElementArray {
             }
         }
         return max;
-    }
-
-    static void printArray(int[] arr, int size){
-        for (int i = 0; i < size; i++){
-            System.out.println(arr[i]);
-        }
-        System.out.println();
     }
 
     public static void main(String[] args) {
