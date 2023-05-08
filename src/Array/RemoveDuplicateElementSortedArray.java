@@ -1,3 +1,11 @@
+/*
+Remove duplicate elements from sorted Array
+https://practice.geeksforgeeks.org/problems/remove-duplicate-elements-from-sorted-array/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=remove-duplicate-elements-from-sorted-array
+
+TC: O(n)
+SC: O(1)
+ */
+
 package Array;
 
 public class RemoveDuplicateElementSortedArray {

@@ -1,3 +1,12 @@
+/*
+Check if array is sorted
+https://practice.geeksforgeeks.org/problems/check-if-an-array-is-sorted0701/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=check-if-an-array-is-sorted
+
+TC: O(n)
+SC: O(1)
+ */
+
+
 package Array;
 
 public class CheckArraySorted {
