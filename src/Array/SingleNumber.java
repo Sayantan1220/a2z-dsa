@@ -1,24 +1,27 @@
-package Array;
+/*
+Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+You must implement a solution with a linear runtime complexity and use only constant extra space.
 
-import java.util.HashMap;
-import java.util.Map;
+Approach : Use Xor function
+XOR of two same numbers is always 0 i.e. a ^ a = 0.
+XOR of a number with 0 will result in the number itself i.e. 0 ^ a = a.
+So all the pair numbers will result in 0 and the single number with 0 xor will be that number only. That will be the result.
+
+TC: O(n)
+SC: O(1)
+ */
+
+package Array;
 
 public class SingleNumber {
 
     public static int singleNumber(int[] nums) {
         int n = nums.length;
-        HashMap<Integer, Integer> counts = new HashMap<>();
+        int xorr = 0;
         for (int i = 0; i < n; i++){
-            int value = counts.getOrDefault(nums[i], 0);
-            counts.put(nums[i], value+1);
+            xorr = xorr ^ nums[i];
         }
-
-        for (Map.Entry<Integer, Integer> value : counts.entrySet()){
-            if (value.getValue() == 1){
-                return value.getKey();
-            }
-        }
-        return -1;
+        return xorr;
     }
 
     public static void main(String[] args) {
