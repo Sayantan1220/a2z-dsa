@@ -1,3 +1,23 @@
+/*
+Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent,
+with the colors in the order red, white, and blue.
+We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+You must solve this problem without using the library's sort function.
+
+https://leetcode.com/problems/sort-colors/description/
+
+Approach :
+Dutch national flag algorithm:
+Take three pointers low & mid at 0 and high at n - 1
+If array [mid] =0, then swap array [mid] with array [low] and increment both pointers once.
+If array [mid] = 1, then no swapping is required. Increment mid-pointer once.
+If array [mid] = 2, then we swap array [mid] with array [high] and decrement the high pointer once.
+
+TC: O(n)
+SC: O(1)
+ */
+
+
 package Array;
 
 import java.util.Arrays;
