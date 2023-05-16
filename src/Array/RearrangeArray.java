@@ -27,14 +27,13 @@ public class RearrangeArray {
         int positiveIndex = 0;
         int negativeIndex = 1;
 
-        for (int i = 0; i < nums.length; i++){
-            if (nums[i] > 0){
-                list[positiveIndex] = nums[i];
-                positiveIndex+=2;
-            }
-            else if (nums[i] < 0){
-                list[negativeIndex] = nums[i];
-                negativeIndex+=2;
+        for (int num : nums) {
+            if (num > 0) {
+                list[positiveIndex] = num;
+                positiveIndex += 2;
+            } else if (num < 0) {
+                list[negativeIndex] = num;
+                negativeIndex += 2;
             }
         }
         return list;
