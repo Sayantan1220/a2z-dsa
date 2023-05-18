@@ -8,7 +8,7 @@ Return s after removing the outermost parentheses of every primitive string in t
 https://leetcode.com/problems/remove-outermost-parentheses/description/
 
 TC: O(n)
-SC: O(1)
+SC: O(n)
  */
 
 
