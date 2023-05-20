@@ -12,7 +12,7 @@ SC: O(n)
  */
 
 
-package String;
+package string;
 
 public class RemoveOutermostParentheses {
     public static String removeOuterParentheses(String s) {
