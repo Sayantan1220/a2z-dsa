@@ -7,7 +7,7 @@ SC: O(1)
  */
 
 
-package Array;
+package array;
 
 public class CheckArraySorted {
 

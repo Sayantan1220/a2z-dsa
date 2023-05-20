@@ -16,7 +16,7 @@ TC: O(n)
 SC: O(n)
  */
 
-package Array;
+package array;
 
 import java.util.Arrays;
 

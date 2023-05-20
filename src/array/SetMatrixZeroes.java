@@ -20,7 +20,7 @@ SC: O(1)
  */
 
 
-package Array;
+package array;
 
 import java.util.Arrays;
 

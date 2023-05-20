@@ -7,7 +7,7 @@ TC: O(n+m)
 SC: O(n+m)
  */
 
-package Array;
+package array;
 
 import java.util.*;
 

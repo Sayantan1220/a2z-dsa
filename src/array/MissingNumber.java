@@ -11,7 +11,7 @@ TC: O(n)
 SC: O(1)
  */
 
-package Array;
+package array;
 
 public class MissingNumber {
     public static int missingNumber(int[] nums) {

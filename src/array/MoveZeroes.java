@@ -7,7 +7,7 @@ TC: O(n)
 SC: O(1)
  */
 
-package Array;
+package array;
 
 public class MoveZeroes {
 

@@ -8,7 +8,7 @@ TC: O(n)
 SC: O(1)
  */
 
-package Array;
+package array;
 
 public class MajorityElement {
     public static int majorityElement(int[] nums) {

@@ -20,7 +20,7 @@ TC: O(n) or (n*logn)
 SC: O(n)
  */
 
-package Array;
+package array;
 
 import java.util.HashMap;
 import java.util.Map;
