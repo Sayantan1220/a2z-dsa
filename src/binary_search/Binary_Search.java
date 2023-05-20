@@ -1,3 +1,15 @@
+/*
+Given an array of integers nums which is sorted in ascending order, and an integer x,
+write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+You must write an algorithm with O(log n) runtime complexity.
+
+https://leetcode.com/problems/binary-search/description/
+
+TC: O(log n)
+SC: O(1)
+ */
+
+
 package binary_search;
 
 public class Binary_Search {
