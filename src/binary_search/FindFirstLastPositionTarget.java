@@ -54,6 +54,7 @@ public class FindFirstLastPositionTarget {
                 low = mid + 1;
             }
         }
+
         // Last Occurrence
         low = 0;
         high = nums.length - 1;
