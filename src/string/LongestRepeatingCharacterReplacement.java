@@ -2,7 +2,7 @@ package string;
 
 public class LongestRepeatingCharacterReplacement {
 
-    public int characterReplacement(String s, int k) {
+    public static int characterReplacement(String s, int k) {
         // Make an array of size 26...
         int[] arr = new int[26];
         // Initialize largestCount, maxlen & beg pointer...
@@ -24,5 +24,11 @@ public class LongestRepeatingCharacterReplacement {
             maxlen = Math.max(maxlen, end - beg + 1);     // end - beg + 1 = size of the current window...
         }
         return maxlen;
+    }
+
+    public static void main(String[] args) {
+        String s = "AABABBA";
+        int result = characterReplacement(s, 2);
+        System.out.println(result);
     }
 }
