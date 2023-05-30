@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class BinarySubarraySum {
 
-    public int numSubarraysWithSum(int[] nums, int target) {
+    public static int numSubarraysWithSum(int[] nums, int target) {
         Map<Integer, Integer> presum = new HashMap<>();
         int sum = 0;
         int total = 0;
@@ -19,5 +19,11 @@ public class BinarySubarraySum {
             presum.put(sum, presum.getOrDefault(sum, 0) + 1);
         }
         return total;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {0,0,0,0,0};
+        int result = numSubarraysWithSum(arr, 0);
+        System.out.println(result);
     }
 }
