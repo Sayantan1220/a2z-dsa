@@ -12,7 +12,7 @@ package array;
 
 public class CountNumberNiceSubarrays {
 
-    public static int numberOfSubarrays(int[] nums, int k) {
+    public static int numberOfSubArrays(int[] nums, int k) {
         int i=0;
         int j=0;
         int oddCount=0;
@@ -40,7 +40,7 @@ public class CountNumberNiceSubarrays {
 
     public static void main(String[] args) {
         int[] arr = {1,2,2,1,2,2,1,2,2,2};
-        int result = numberOfSubarrays(arr, 3);
+        int result = numberOfSubArrays(arr, 3);
         System.out.println(result);
     }
 }
