@@ -2,7 +2,7 @@ package array;
 
 public class MaximumPointsYouCanObtainCards {
 
-    public int maxScore(int[] cardPoints, int k) {
+    public static int maxScore(int[] cardPoints, int k) {
         int lastIndex = cardPoints.length - 1; // index of last element in cardPoints array
         int windowStartIndex = 0; // start index of sliding window
         int windowEndIndex = lastIndex - k; // end index of sliding window
@@ -24,5 +24,11 @@ public class MaximumPointsYouCanObtainCards {
             windowEndIndex++; // move the end index of sliding window to the right
         }
         return totalSum - minWindowSum; // return the maximum possible score
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {9,7,7,9,7,7,9};
+        int result = maxScore(arr, 7);
+        System.out.println(result);
     }
 }
