@@ -5,11 +5,11 @@ import java.util.Map;
 
 public class SubarraysKDifferentIntegers {
 
-    public int subarraysWithKDistinct(int[] A, int K) {
-        return atMostK(A, K) - atMostK(A, K - 1);
+    public static int subarraysWithKDistinct(int[] nums, int k) {
+        return atMostK(nums, k) - atMostK(nums, k - 1);
     }
 
-    int atMostK(int[] nums, int k) {
+    static int atMostK(int[] nums, int k) {
         int i = 0, res = 0;
         Map<Integer, Integer> count = new HashMap<>();
         for (int j = 0; j < nums.length; ++j) {
@@ -23,5 +23,11 @@ public class SubarraysKDifferentIntegers {
             res += j - i + 1;
         }
         return res;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1,2,1,2,3};
+        int result = subarraysWithKDistinct(arr, 2);
+        System.out.println(result);
     }
 }
