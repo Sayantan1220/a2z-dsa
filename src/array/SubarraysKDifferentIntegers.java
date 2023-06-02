@@ -1,3 +1,22 @@
+/*
+Given an integer array nums and an integer k, return the number of good subarrays of nums.
+A good array is an array where the number of different integers in that array is exactly k.
+For example, [1,2,3,1,2] has 3 different integers: 1, 2, and 3.
+A subarray is a contiguous part of an array.
+https://leetcode.com/problems/subarrays-with-k-different-integers/description/
+
+Approach:
+First you may have feeling of using sliding window.
+Then this idea get stuck in the middle.
+This problem will be a very typical sliding window,
+if it asks the number of subarrays with at most K distinct elements.
+Just need one more step to reach the folloing equation:
+exactly(K) = atMost(K) - atMost(K-1)
+
+TC: O(n)
+SC: O(1)
+ */
+
 package array;
 
 import java.util.HashMap;
