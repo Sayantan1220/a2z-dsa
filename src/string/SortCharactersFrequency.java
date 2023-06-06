@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.PriorityQueue;
 
 public class SortCharactersFrequency {
-    public String frequencySort(String s) {
+    public static String frequencySort(String s) {
         // Three steps:
         // 1> create hashmap store char and its frequencies
         // 2> create a priority queue maxHeap store char with decreasing order of there frequencies.
@@ -24,5 +24,11 @@ public class SortCharactersFrequency {
             result.append(String.valueOf(current).repeat(Math.max(0, map.get(current))));
         }
         return result.toString();
+    }
+
+    public static void main(String[] args) {
+        String s = "cccaaa";
+        String result = frequencySort(s);
+        System.out.println(result);
     }
 }
