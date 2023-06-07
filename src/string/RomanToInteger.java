@@ -21,7 +21,13 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer.
 https://leetcode.com/problems/roman-to-integer/description/
 
+Approach:
+It utilizes map to store the symbol-value mappings for the seven Roman numeral symbols.
+The algorithm iterates through the input Roman numeral string from left to right, performing the necessary additions and subtractions based on the symbol values.
+By comparing each symbol with the next one, it accurately handles the subtraction cases.
 
+TC: O(n)
+SC: O(1)
  */
 
 package string;
