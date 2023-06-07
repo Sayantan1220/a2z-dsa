@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class RomanToInteger {
 
-    public int romanToInt(String s) {
+    public static int romanToInt(String s) {
         Map<Character, Integer> map = new HashMap<>() {{
             put('I', 1);
             put('V', 5);
@@ -25,5 +25,11 @@ public class RomanToInteger {
             }
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        String s = "MCMXCIV";
+        int result = romanToInt(s);
+        System.out.println(result);
     }
 }
