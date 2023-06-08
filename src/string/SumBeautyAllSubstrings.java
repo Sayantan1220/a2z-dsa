@@ -1,3 +1,14 @@
+/*
+The beauty of a string is the difference in frequencies between the most frequent and least frequent characters.
+For example, the beauty of "abaacc" is 3 - 1 = 2.
+Given a string s, return the sum of beauty of all of its substrings.
+https://leetcode.com/problems/sum-of-beauty-of-all-substrings/description/
+
+TC: O(n^2)
+SC: O(1)
+ */
+
+
 package string;
 
 public class SumBeautyAllSubstrings {
