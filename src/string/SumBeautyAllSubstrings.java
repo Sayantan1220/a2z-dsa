@@ -13,7 +13,7 @@ package string;
 
 public class SumBeautyAllSubstrings {
 
-    public int beautySum(String s) {
+    public static int beautySum(String s) {
         //using an array as frequency :-
         int sum = 0 ;
         for(int i = 0 ; i < s.length() ; i++){
@@ -28,7 +28,7 @@ public class SumBeautyAllSubstrings {
         return sum ;
     }
 
-    public int beauty(int[] frequency){
+    public static int beauty(int[] frequency){
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE ;
         for (int j : frequency) {
@@ -38,5 +38,11 @@ public class SumBeautyAllSubstrings {
             max = Math.max(j, max);
         }
         return max-min ;
+    }
+
+    public static void main(String[] args) {
+        String s = "aabcbaa";
+        int result = beautySum(s);
+        System.out.println(result);
     }
 }
