@@ -16,17 +16,16 @@ public class SumBeautyAllSubstrings {
             }
         }
         return sum ;
+    }
 
-    }public int beauty(int[] frequency){
-
+    public int beauty(int[] frequency){
         int min = Integer.MAX_VALUE; int max = Integer.MIN_VALUE ;
+        for (int j : frequency) {
 
-        for(int i = 0 ; i < frequency.length ; i++){
-
-            if(frequency[i] != 0){//this is very very very important
-                min = Math.min(frequency[i],min);
+            if (j != 0) {//this is very very very important
+                min = Math.min(j, min);
             }
-            max = Math.max(frequency[i],max);
+            max = Math.max(j, max);
         }
         return max-min ;
     }
