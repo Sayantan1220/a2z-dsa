@@ -1,3 +1,20 @@
+/*
+Given a string s consisting only of characters a, b and c.
+Return the number of substrings containing at least one occurrence of all these characters a, b and c.
+https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/description/
+
+Approach:
+i)first we have to find substring that contains only 'a','b','c'.
+ii)after finding the substring you can think there is no need to increase the 'j' because ,all the substring that you will get has already been contains 'a','b','c'.thats why ans+=n-j; is calculated.
+ex:- you can see in the first example we found our first substring at i=0 to j=2; so count of substring(that contains 'a','b','c') starting with i=0,is - n-j=6-2=4;
+(for Better understanding, you can dry run this);
+iii)then simply increase the ith index to get another sub string that contains only 'a','b','c'.(bassically sliding part);
+
+TC: O(n)
+SC: O(n)
+ */
+
+
 package string;
 
 import java.util.HashMap;
