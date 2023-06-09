@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class NumberSubstringsContainingAllThreeCharacters {
 
-    public int numberOfSubstrings(String s) {
+    public static int numberOfSubstrings(String s) {
         int n=s.length();
         int i=0;
         int j=0;
@@ -28,5 +28,11 @@ public class NumberSubstringsContainingAllThreeCharacters {
             j++;
         }
         return ans;
+    }
+
+    public static void main(String[] args) {
+        String s = "abcabc";
+        int result = numberOfSubstrings(s);
+        System.out.println(result);
     }
 }
