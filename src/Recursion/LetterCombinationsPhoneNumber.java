@@ -7,9 +7,9 @@ import java.util.Map;
 
 public class LetterCombinationsPhoneNumber {
 
-    Map<Character, String> map;
-    List<String> res;
-    public List<String> letterCombinations(String digits) {
+    static Map<Character, String> map;
+    static List<String> res;
+    public static List<String> letterCombinations(String digits) {
         res = new ArrayList<>();
         if(digits.length() == 0) return res;
         map = new HashMap<>();
@@ -25,7 +25,7 @@ public class LetterCombinationsPhoneNumber {
         return res;
     }
 
-    public void solve(String s, int ind, String digit, int len) {
+    public static void solve(String s, int ind, String digit, int len) {
         if(s.length() == len) {
             res.add(s);
             return;
@@ -35,5 +35,11 @@ public class LetterCombinationsPhoneNumber {
         for(int i=0; i<str.length(); i++) {
             solve(s+str.charAt(i), ind+1, digit, len);
         }
+    }
+
+    public static void main(String[] args) {
+        String s = "239";
+        List<String> result = letterCombinations(s);
+        System.out.println(result);
     }
 }
