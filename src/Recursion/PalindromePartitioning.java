@@ -1,3 +1,12 @@
+/*
+Given a string s, partition s such that every substring of the partition is a palindrome.
+Return all possible palindrome partitioning of s.
+https://leetcode.com/problems/palindrome-partitioning/description/
+
+TC: O(n^2)
+SC: O(n)
+ */
+
 package Recursion;
 
 import java.util.ArrayList;
