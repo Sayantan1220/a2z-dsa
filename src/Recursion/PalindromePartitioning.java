@@ -5,7 +5,7 @@ import java.util.List;
 
 public class PalindromePartitioning {
 
-    public List<List<String>> partition(String s) {
+    public static List<List<String>> partition(String s) {
         //Approach: Using Backtracking, T.C: O(n^2)
         if(s==null || s.length()==0) return new ArrayList<>();
         List<List<String>> ans = new ArrayList<>();
@@ -13,7 +13,7 @@ public class PalindromePartitioning {
         return ans;
     }
 
-    public void helper(String s, List<List<String>> ans, List<String> level){
+    public static void helper(String s, List<List<String>> ans, List<String> level){
         //base case
         if(s==null || s.length()==0){
             ans.add(new ArrayList<>(level));
@@ -34,7 +34,7 @@ public class PalindromePartitioning {
     }
 
     //using binary search algo
-    public boolean isPalindrome(String temp){
+    public static boolean isPalindrome(String temp){
         int left = 0;
         int right = temp.length()-1;
         while(left<=right){
@@ -45,5 +45,11 @@ public class PalindromePartitioning {
             right--;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        String s = "aab";
+        List<List<String>> result = partition(s);
+        System.out.println(result);
     }
 }
