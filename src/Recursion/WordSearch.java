@@ -2,7 +2,7 @@ package Recursion;
 
 public class WordSearch {
 
-    public boolean exist(char[][] board, String word) {
+    public static boolean exist(char[][] board, String word) {
         int m = board.length;
         int n = board[0].length;
         boolean result = false;
@@ -18,7 +18,7 @@ public class WordSearch {
         }
         return result;
     }
-    public boolean dfs(char[][] board, String word, int i, int j, int k)
+    public static boolean dfs(char[][] board, String word, int i, int j, int k)
     {
         int m = board.length;
         int n = board[0].length;
@@ -41,5 +41,12 @@ public class WordSearch {
             board[i][j]=temp;
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+        String word = "ABCCED";
+        boolean result = exist(board, word);
+        System.out.println(result);
     }
 }
