@@ -10,7 +10,7 @@ SC: O(n)
  */
 
 
-package Recursion;
+package recursion;
 
 public class GoodNumber {
 

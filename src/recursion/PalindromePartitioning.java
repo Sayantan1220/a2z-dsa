@@ -7,7 +7,7 @@ TC: O(n^2)
 SC: O(n)
  */
 
-package Recursion;
+package recursion;
 
 import java.util.ArrayList;
 import java.util.List;

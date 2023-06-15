@@ -25,7 +25,7 @@ and the maximum depth of the call stack is k.
  */
 
 
-package Recursion;
+package recursion;
 
 public class WordSearch {
 
