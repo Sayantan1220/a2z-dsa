@@ -69,4 +69,15 @@ public class StackUsingQueues {
     public boolean empty() {
         return q1.isEmpty() && q2.isEmpty();
     }
+
+    public static void main(String[] args) {
+        StackUsingQueues obj = new StackUsingQueues();
+        obj.push(5);
+        int param_2 = obj.pop();
+        int param_3 = obj.top();
+        boolean param_4 = obj.empty();
+        System.out.println(param_2);
+        System.out.println(param_3);
+        System.out.println(param_4);
+    }
 }
