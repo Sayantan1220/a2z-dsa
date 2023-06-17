@@ -34,4 +34,16 @@ public class QueueUsingStacks {
     public boolean empty() {
         return values.isEmpty();
     }
+
+    public static void main(String[] args) {
+        QueueUsingStacks obj = new QueueUsingStacks();
+        obj.push(5);
+        obj.push(2);
+        int param_3 = obj.peek();
+        int param_2 = obj.pop();
+        boolean param_4 = obj.empty();
+        System.out.println(param_2);
+        System.out.println(param_3);
+        System.out.println(param_4);
+    }
 }
