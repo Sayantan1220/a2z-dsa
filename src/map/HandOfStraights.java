@@ -26,7 +26,6 @@ The space complexity of the solution is O(n) as we use a map to store the freque
 In the worst case, if all cards in the hand are unique, the map will have n entries.
 */
 
-
 package map;
 
 import java.util.Arrays;
