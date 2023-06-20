@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 
 public class TaskScheduler {
-    public int leastInterval(char[] tasks, int n) {
+    public static int leastInterval(char[] tasks, int n) {
         // Create a frequency array to keep track of the count of each task
         int[] freq = new int[26];
         for (char task : tasks) {
@@ -22,5 +22,11 @@ public class TaskScheduler {
         }
         // If there are any idle slots left, add them to the total number of tasks
         return idleSlots > 0 ? idleSlots + tasks.length : tasks.length;
+    }
+
+    public static void main(String[] args) {
+        char[] arr = {'A','A','A','B','B','B'};
+        int result = leastInterval(arr, 2);
+        System.out.println(result);
     }
 }
