@@ -1,3 +1,24 @@
+/*
+Given a characters array tasks, representing the tasks a CPU needs to do, where each letter represents a different task.
+Tasks could be done in any order. Each task is done in one unit of time. For each unit of time, the CPU could complete either one task or just be idle.
+However, there is a non-negative integer n that represents the cool down period between two same tasks (the same letter in the array),
+that is that there must be at least n units of time between any two same tasks.
+Return the least number of units of times that the CPU will take to finish all the given tasks.
+https://leetcode.com/problems/task-scheduler/description/
+
+Approach:
+Create a frequency array freq to count the number of occurrences of each task.
+Sort the freq array in ascending order.
+Calculate the maximum frequency maxFreq of any task.
+Calculate the number of idle slots idleSlots required by the most frequent task, which is equal to (maxFreq - 1) * n.
+Iterate over the remaining tasks in descending order of frequency and subtract the minimum of maxFreq and the frequency of the task from idleSlots.
+If idleSlots is still positive, add it to the length of the input task list tasks. Otherwise, return tasks.size().
+
+Time complexity: The time complexity of the algorithm is O(26 log 26 + n), where 26 log 26 is the time complexity of sorting the frequency array,
+and n is the length of the input task list.
+Space complexity: The space complexity of the algorithm is O(26), which is the size of the frequency array.
+ */
+
 package array;
 
 import java.util.Arrays;
