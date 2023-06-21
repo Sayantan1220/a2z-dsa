@@ -1,5 +1,7 @@
 package map;
 
+import stack_queue.QueueUsingStacks;
+
 import java.util.*;
 
 public class DesignTwitter {
@@ -158,5 +160,11 @@ public class DesignTwitter {
 
             return this.tail;
         }
+    }
+
+    public static void main(String[] args) {
+        DesignTwitter obj = new DesignTwitter();
+        obj.postTweet(1, 5);
+        System.out.println(obj.getNewsFeed(1));
     }
 }
