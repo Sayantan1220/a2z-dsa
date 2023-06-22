@@ -51,4 +51,13 @@ public class FindMedianDataStream {
         if(n%2 == 1) return list.get(n/2);
         return (double)(list.get(n/2) + list.get(n/2 - 1))/2;
     }
+
+    public static void main(String[] args) {
+        FindMedianDataStream obj = new FindMedianDataStream();
+        obj.addNum(1);
+        obj.addNum(2);
+        System.out.println(obj.findMedian());
+        obj.addNum(3);
+        System.out.println(obj.findMedian());
+    }
 }
