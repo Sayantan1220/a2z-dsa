@@ -7,11 +7,11 @@ public class FindMedianDataStream {
 
     List<Integer> list;
     public FindMedianDataStream() {
-        this.list = new ArrayList<Integer>();
+        this.list = new ArrayList<>();
     }
 
     public void addNum(int num) {
-        if(list.size() == 0) list.add(0, num);
+        if(list.isEmpty()) list.add(0, num);
         else{
             int i=0;
             while(list.get(i) <= num && i<list.size()-1) i++;
