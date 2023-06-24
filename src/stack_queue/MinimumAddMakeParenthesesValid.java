@@ -1,7 +1,9 @@
 package stack_queue;
 
+import java.util.Stack;
+
 public class MinimumAddMakeParenthesesValid {
-    public int minAddToMakeValid(String s) {
+    public static int minAddToMakeValid(String s) {
         Stack<Character> stack = new Stack<>();
         int count = 0;
         for(char c : s.toCharArray()) {
@@ -20,6 +22,11 @@ public class MinimumAddMakeParenthesesValid {
             count += stack.size();
         }
         return count;
+    }
+
+    public static void main(String[] args) {
+        int result = minAddToMakeValid("((()");
+        System.out.println(result);
     }
 
 }
