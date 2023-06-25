@@ -2,7 +2,7 @@ package string;
 
 public class CountSay {
 
-    public String countAndSay(int n) {
+    public static String countAndSay(int n) {
         if (n <= 0)
             return null;
         String result = "1";
@@ -30,5 +30,10 @@ public class CountSay {
             i++;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        String result = countAndSay(4);
+        System.out.println(result);
     }
 }
