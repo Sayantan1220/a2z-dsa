@@ -3,15 +3,15 @@ package string;
 public class RepeatedStringMatch {
 
     public static int repeatedStringMatch(String a, String b) {
-        String copy = "";
+        StringBuilder copy = new StringBuilder();
         int count=0;
         while(copy.length()<b.length()){
-            copy+=a;
+            copy.append(a);
             count++;
         }
-        if(copy.indexOf(b)>=0)
+        if(copy.toString().contains(b))
             return count;
-        if((copy+a).indexOf(b)>=0)
+        if((copy + a).contains(b))
             return ++count;
         return -1;
     }
