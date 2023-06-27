@@ -1,7 +1,7 @@
 package string;
 
 public class FindIndexFirstOccurence {
-    public int strStr(String haystack, String needle) {
+    public static int strStr(String haystack, String needle) {
         int haylength=haystack.length();
         int needlelength=needle.length();
         if(haylength<needlelength)
@@ -15,5 +15,10 @@ public class FindIndexFirstOccurence {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int result = strStr("sadbutsad", "but");
+        System.out.println(result);
     }
 }
