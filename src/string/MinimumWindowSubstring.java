@@ -3,7 +3,7 @@ package string;
 import java.util.HashMap;
 
 public class MinimumWindowSubstring {
-    public String minWindow(String s, String t) {
+    public static String minWindow(String s, String t) {
         String ans = "";
         HashMap<Character, Integer> hm2 = new HashMap<>();
         for(int i = 0; i < t.length(); i++){
@@ -40,10 +40,14 @@ public class MinimumWindowSubstring {
                     mcnt--;
                 f2 = true;
             }
-            if(f1 == false && f2 == false)
+            if(!f1 && !f2)
                 break;
         }
         return ans;
     }
 
+    public static void main(String[] args) {
+        String result = minWindow("ADOBECODEBANC", "ABC");
+        System.out.println(result);
+    }
 }
