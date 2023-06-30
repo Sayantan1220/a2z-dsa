@@ -1,7 +1,7 @@
 package array;
 
 public class LemonadeChange {
-    public boolean lemonadeChange(int[] bills) {
+    public static boolean lemonadeChange(int[] bills) {
         int count5=0;
         int count10=0;
         int count20=0;
@@ -31,4 +31,9 @@ public class LemonadeChange {
         return true;
     }
 
+    public static void main(String[] args) {
+        int[] bills = {5,5,10,10,20};
+        boolean result = lemonadeChange(bills);
+        System.out.println(result);
+    }
 }
