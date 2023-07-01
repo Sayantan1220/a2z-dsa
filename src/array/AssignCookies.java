@@ -3,7 +3,7 @@ package array;
 import java.util.Arrays;
 
 public class AssignCookies {
-    public int findContentChildren(int[] g, int[] s) {
+    public static int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g); // sort the children's greed factors in non-decreasing order
         Arrays.sort(s); // sort the cookie sizes in non-decreasing order
         int contentChildren = 0;
@@ -19,4 +19,10 @@ public class AssignCookies {
         return contentChildren;
     }
 
+    public static void main(String[] args) {
+        int[] g = {1,2};
+        int[] s = {1,2,3};
+        int result = findContentChildren(g,s);
+        System.out.println(result);
+    }
 }
