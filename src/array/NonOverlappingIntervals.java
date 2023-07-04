@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class NonOverlappingIntervals {
-    public int eraseOverlapIntervals(int[][] nums) {
+    public static int eraseOverlapIntervals(int[][] nums) {
         int n = nums.length;
         Arrays.sort(nums, Comparator.comparingDouble(o -> o[1]));
         int last = nums[0][1];
@@ -16,5 +16,11 @@ public class NonOverlappingIntervals {
             }
         }
         return n - count;
+    }
+
+    public static void main(String[] args) {
+        int[][] nums = {{1,2},{2,3},{3,4},{1,3}};
+        int result = eraseOverlapIntervals(nums);
+        System.out.println(result);
     }
 }
