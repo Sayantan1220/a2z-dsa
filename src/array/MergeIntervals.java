@@ -11,12 +11,13 @@ package array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals.length <= 1) return intervals;
-        Arrays.sort(intervals, (arr1, arr2) -> Integer.compare(arr1[0], arr2[0]));
+        Arrays.sort(intervals, Comparator.comparingInt(arr -> arr[0]));
         List< int[] > output_arr = new ArrayList<>();
         int[] current_interval = intervals[0];
         output_arr.add(current_interval);
