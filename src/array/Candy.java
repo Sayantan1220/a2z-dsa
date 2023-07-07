@@ -1,7 +1,7 @@
 package array;
 
 public class Candy {
-    public int candy(int[] ratings) {
+    public static int candy(int[] ratings) {
         if (ratings == null || ratings.length == 0)
         {
             return 0;
@@ -34,5 +34,11 @@ public class Candy {
             candies[i] = cur;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] bills = {1,0,2};
+        int result = candy(bills);
+        System.out.println(result);
     }
 }
