@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 public class TopKFrequentElements {
-    public int[] topKFrequent(int[] nums, int k) {
+    public static int[] topKFrequent(int[] nums, int k) {
         // Count the frequency of each element
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         for (int num : nums) {
@@ -28,5 +28,11 @@ public class TopKFrequentElements {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        int[] bills = {2,3,1,1,4};
+        int result = topKFrequent(bills);
+        System.out.println(result);
     }
 }
