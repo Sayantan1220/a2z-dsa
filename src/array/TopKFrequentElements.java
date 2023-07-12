@@ -1,5 +1,6 @@
 package array;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -31,8 +32,8 @@ public class TopKFrequentElements {
     }
 
     public static void main(String[] args) {
-        int[] bills = {2,3,1,1,4};
-        int result = topKFrequent(bills);
-        System.out.println(result);
+        int[] bills = {1,1,1,2,2,3};
+        int[] result = topKFrequent(bills, 2);
+        System.out.println(Arrays.stream(result));
     }
 }
