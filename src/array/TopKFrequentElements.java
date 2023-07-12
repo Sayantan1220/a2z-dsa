@@ -1,3 +1,29 @@
+/*
+Given an integer array nums and an integer k, return the k most frequent elements.
+You may return the answer in any order.
+https://leetcode.com/problems/top-k-frequent-elements/description/
+
+
+Intuition
+The intuition behind the solution is to count the frequency of each element using a HashMap
+and then use a min heap (PriorityQueue) to keep track of the k most frequent elements.
+The min heap ensures that the elements with the lowest frequency are removed when the size exceeds k,
+resulting in the k most frequent elements being retained.
+
+Approach
+Counting the frequency of each element using a HashMap:
+This step has a time complexity of O(n), where n is the number of elements in the input array.
+Maintaining a min heap of size k: This step involves iterating over the frequency map
+and adding elements to the min heap. If the size of the min heap exceeds k,
+the element with the lowest frequency is removed. This step has a time complexity of O(n log k).
+
+Complexity
+Time complexity:
+Time complexity of the solution is O(n log k) where n is the number of elements in the input array.
+Space complexity:
+The solution uses additional space to store the frequency map, which requires O(n) space.
+Additionally, the min heap has a maximum size of k, resulting in O(k) space. Thus, the total space complexity is O(n + k).
+ */
 package array;
 
 import java.util.Arrays;
