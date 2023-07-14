@@ -1,7 +1,7 @@
 package string;
 
 public class LongestHappyPrefix {
-    public String longestPrefix(String s) {
+    public static String longestPrefix(String s) {
         int n = s.length();
         int[] lps = new int[s.length()];
         int i = 1, len = 0;
@@ -22,4 +22,8 @@ public class LongestHappyPrefix {
         return s.substring(0, lps[s.length() - 1]);
     }
 
+    public static void main(String[] args) {
+        String result = longestPrefix("level");
+        System.out.println(result);
+    }
 }
