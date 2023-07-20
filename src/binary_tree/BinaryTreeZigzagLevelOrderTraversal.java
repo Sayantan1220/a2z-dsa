@@ -1,5 +1,7 @@
 package binary_tree;
 
+import java.util.*;
+
 public class BinaryTreeZigzagLevelOrderTraversal {
 
     public class TreeNode {
@@ -13,7 +15,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
           this.left = left;
           this.right = right;
       }
-  }
+    }
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
 
