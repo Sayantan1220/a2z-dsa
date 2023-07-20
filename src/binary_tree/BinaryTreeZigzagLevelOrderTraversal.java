@@ -47,7 +47,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
             }
 
             //reverse list
-            if(flag == true)
+            if(flag)
                 Collections.reverse(list);
 
             flag = !flag;
