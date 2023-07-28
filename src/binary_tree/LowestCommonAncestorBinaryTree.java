@@ -5,7 +5,14 @@ According to the definition of LCA on Wikipedia:
 (where we allow a node to be a descendant of itself).”
 https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
 
+Approach:
+Here we are checking if the root itself if one of the numbers,
+then return the root or find the numbers in left and right respectively.
+If both are true means numbers are from different(left as well as right subtree) so root is the common ancestor.
+Otherwise if only left is not null it means both the numbers are from left sided subtree.
 
+TC:O(N)
+SC:O(N)
  */
 
 package binary_tree;
