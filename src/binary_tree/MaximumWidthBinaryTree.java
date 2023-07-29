@@ -5,6 +5,19 @@ import java.util.Map;
 
 public class MaximumWidthBinaryTree {
 
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+  }
+
     Map<Integer, Integer> levelMin = new HashMap<>();
     public int widthOfBinaryTree(TreeNode root) {
         return dfs(root, 1, 1);
