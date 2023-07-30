@@ -1,6 +1,15 @@
 package binary_tree;
 
+import java.util.*;
+
 public class AllNodesDistanceKBinaryTree {
+
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+    }
 
     public void getParentsByBFS(Map<TreeNode, TreeNode> parent, TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
