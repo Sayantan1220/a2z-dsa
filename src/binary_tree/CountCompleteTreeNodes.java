@@ -18,8 +18,7 @@ public class CountCompleteTreeNodes {
     public int countNodes(TreeNode root) {
         if(root == null) return 0;
 
-        int ans = countAllNodes(root);
-        return ans;
+        return countAllNodes(root);
     }
     int countAllNodes(TreeNode root)
     {
