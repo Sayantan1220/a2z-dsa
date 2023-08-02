@@ -2,6 +2,19 @@ package binary_tree;
 
 public class ConstructBinaryTreePreorderInorderTraversal {
 
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+   }
+
     public TreeNode buildTree(int[] P, int[] I) {
         Map<Integer, Integer> M = new HashMap<>();
         for (int i = 0; i < I.length; i++)
