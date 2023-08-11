@@ -2,13 +2,12 @@ package string;
 
 public class ShortestPalindrome {
 
-    public String shortestPalindrome(String s) {
+    public static String shortestPalindrome(String s) {
         if(s.length()<=1) return s;
         String new_s = s+"#"+new StringBuilder(s).reverse().toString();
         int[] position = new int[new_s.length()];
 
-        for(int i=1;i<position.length;i++)
-        {
+        for(int i=1;i<position.length;i++) {
             int pre_pos = position[i-1];
             while(pre_pos>0 && new_s.charAt(pre_pos)!=new_s.charAt(i))
                 pre_pos = position[pre_pos-1];
@@ -16,5 +15,11 @@ public class ShortestPalindrome {
         }
 
         return new StringBuilder(s.substring(position[position.length-1])).reverse()+s;
+    }
+
+    public static void main(String[] args) {
+        String s = "abcd";
+        String result = shortestPalindrome(s);
+        System.out.println(result);
     }
 }
