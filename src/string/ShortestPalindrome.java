@@ -15,6 +15,6 @@ public class ShortestPalindrome {
             position[i] = pre_pos+((new_s.charAt(pre_pos)==new_s.charAt(i))?1:0);
         }
 
-        return new StringBuilder(s.substring(position[position.length-1])).reverse().toString()+s;
+        return new StringBuilder(s.substring(position[position.length-1])).reverse()+s;
     }
 }
