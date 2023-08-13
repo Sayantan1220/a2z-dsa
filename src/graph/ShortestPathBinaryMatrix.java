@@ -1,11 +1,24 @@
 /*
+Given an n x n binary matrix grid, return the length of the shortest clear path in the matrix.
+If there is no clear path, return -1.
+A clear path in a binary matrix is a path from the top-left cell (i.e., (0, 0)) to the bottom-right cell
+(i.e., (n - 1, n - 1)) such that:
+All the visited cells of the path are 0.
+All the adjacent cells of the path are 8-directionally connected (i.e., they are different and they share an edge or a corner).
+The length of a clear path is the number of visited cells of this path.
+https://leetcode.com/problems/shortest-path-in-binary-matrix/description/
 
 Intuition
+
 The goal is to find the shortest clear path from the top-left cell to the bottom-right cell in the binary matrix.
 A clear path consists of cells with a value of 0, and adjacent cells are considered 8-directionally connected.
-The BFS algorithm is used to explore cells in a breadth-first manner, starting from the top-left cell and moving towards the bottom-right cell.
+The BFS algorithm is used to explore cells in a breadth-first manner, starting from the top-left cell
+and moving towards the bottom-right cell.
+
 Approach
-The algorithm starts by checking if the top-left and bottom-right cells are obstacles (1). If either of them is an obstacle, there is no clear path, and -1 is returned.
+
+The algorithm starts by checking if the top-left and bottom-right cells are obstacles (1). If either of them is an obstacle,
+there is no clear path, and -1 is returned.
 A directions array is defined to represent the 8 possible directions to explore neighboring cells.
 A queue is initialized, and the top-left cell is added to the queue as the starting point.
 The grid is updated to mark the starting cell as visited.
@@ -20,12 +33,19 @@ If the neighboring cell is within the grid boundaries, has a value of 0, and has
 The neighboring cell is added to the queue.
 The neighboring cell is marked as visited in the grid.
 The pathLength is incremented to move to the next level.
+
 Complexity
+
 Time complexity:
-The time complexity of the BFS algorithm is O(V + E), where V is the number of vertices (cells) and E is the number of edges (adjacent connections). In this case, V represents the number of cells in the grid, which is n^2, and E is proportional to V, as each cell has at most 8 neighbors in the 8-directional connectivity. Therefore, the time complexity is O(n^2).
+The time complexity of the BFS algorithm is O(V + E), where V is the number of vertices (cells)
+and E is the number of edges (adjacent connections). In this case, V represents the number of cells in the grid,
+which is n^2, and E is proportional to V, as each cell has at most 8 neighbors in the 8-directional connectivity.
+Therefore, the time complexity is O(n^2).
 
 Space complexity:
-The space complexity is determined by the queue and the grid. The queue can store at most n^2 cells in the worst case, resulting in O(n^2) space. The grid uses O(n^2) space as well to represent the visited status of each cell. Hence, the overall space complexity is O(n^2).
+The space complexity is determined by the queue and the grid. The queue can store at most n^2 cells in the worst case,
+resulting in O(n^2) space. The grid uses O(n^2) space as well to represent the visited status of each cell.
+Hence, the overall space complexity is O(n^2).
  */
 
 package graph;
