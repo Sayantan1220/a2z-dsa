@@ -14,7 +14,8 @@ public class PathMinimumEffort {
         pq.add(new int[] {0, 0, 0});
         while(!pq.isEmpty()) {
             int[] p = pq.poll();
-            int i = p[0], j = p[1];
+            int i = p[0];
+            int j = p[1];
             if(i == m - 1 && j == n - 1) break;
             for(int[] d: dir) {
                 int x = i + d[0], y = j + d[1];
