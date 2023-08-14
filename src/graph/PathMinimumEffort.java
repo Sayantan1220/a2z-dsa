@@ -1,3 +1,25 @@
+/*
+You are a hiker preparing for an upcoming hike. You are given heights, a 2D array of size rows x columns,
+where heights[row][col] represents the height of cell (row, col). You are situated in the top-left cell, (0, 0),
+and you hope to travel to the bottom-right cell, (rows-1, columns-1) (i.e., 0-indexed).
+You can move up, down, left, or right, and you wish to find a route that requires the minimum effort
+A route's effort is the maximum absolute difference in heights between two consecutive cells of the route.
+Return the minimum effort required to travel from the top-left cell to the bottom-right cell.
+https://leetcode.com/problems/path-with-minimum-effort/description/
+
+Approach:
+Dijkstra's algorithm
+Model as a graph problem where each cell represents a vertex and absolute difference between heights of neighbour cells
+represents the edge cost. Find the shortest path from source vertex (first cell) to destination vertex (last cell)
+using any shortest path algorithm like Dijkstra's, Bellman-Ford etc.
+Note that definition of distance of a path here is not equal to sum of edge costs but instead equal to maximum edge cost.
+Shortest path algorithms should, however, continue to work here because "max of edge costs" is a
+monotonically non-decreasing function just like sum of edge costs.
+
+Time complexity: O(m n log (m n))
+Space complexity: O(m n)
+ */
+
 package graph;
 
 import java.util.Arrays;
