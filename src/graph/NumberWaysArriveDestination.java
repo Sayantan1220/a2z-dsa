@@ -1,5 +1,9 @@
 package graph;
 
+import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class NumberWaysArriveDestination {
     public int countPaths(int n, int[][] roads) {
         //the approach here will be same as djskarta but we will require to count the number of
@@ -18,7 +22,8 @@ public class NumberWaysArriveDestination {
         }
         //creating and filling ways and cost array
         //it can be also said to be type of tabulation (dp) problem because we have to memorize the ways we reach to node
-        long[] cost = new long[n], ways = new long[n];
+        long[] cost = new long[n];
+        long[] ways = new long[n];
         Arrays.fill(cost,1,n, Long.MAX_VALUE);
         ways[0]=1;
 
