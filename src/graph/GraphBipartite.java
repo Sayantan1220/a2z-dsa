@@ -1,13 +1,16 @@
 package graph;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class GraphBipartite {
     int[] colors;
     public boolean isBipartite(int[][] graph) {
-        HashMap<Integer, ArrayList<Integer>> adj = new HashMap<Integer, ArrayList<Integer>>();
+        HashMap<Integer, ArrayList<Integer>> adj = new HashMap<>();
         colors = new int[graph.length];
 
         for (int i = 0; i < graph.length; i++) {
-            adj.putIfAbsent(i, new ArrayList<Integer>());
+            adj.putIfAbsent(i, new ArrayList<>());
             for(int j=0;j<graph[i].length;j++){
                 adj.get(i).add(graph[i][j]);
             }
@@ -17,7 +20,7 @@ public class GraphBipartite {
             if(colors[i]==0 && adj.get(i)==null) {
                 colors[i]=1;
             }
-            else if(colors[i]==0 && !(adj.get(i)==null)) {
+            else if(colors[i]==0 && adj.get(i)!=null) {
                 if(!bfs(adj, i)) {
                     return false;
                 }
@@ -27,12 +30,11 @@ public class GraphBipartite {
     }
 
     private boolean bfs(HashMap<Integer, ArrayList<Integer>> adj, int node) {
-        ArrayList<Integer> que = new ArrayList<Integer>();
+        ArrayList<Integer> que = new ArrayList<>();
         que.add(node);
         colors[node] = 1;
         int c =0;
-        while(que.size()>0) {
-
+        while(!que.isEmpty()) {
             for(int i=0;i<adj.get(que.get(0)).size();i++) {
                 if(colors[adj.get(que.get(0)).get(i)]==0) {
                     if(colors[que.get(0)]==1) {
