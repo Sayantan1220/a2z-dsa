@@ -9,6 +9,8 @@ The graph may not be connected, meaning there may be two nodes u and v such that
 A graph is bipartite if the nodes can be partitioned into two independent sets A and B such that every edge in
 the graph connects a node in set A and a node in set B.
 Return true if and only if it is bipartite.
+
+https://leetcode.com/problems/is-graph-bipartite/description/
  */
 package graph;
 
