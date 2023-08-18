@@ -1,5 +1,10 @@
 package graph;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class CourseSchedule {
 
     public boolean canFinish(int n, int[][] prerequisites) {
@@ -27,7 +32,6 @@ public class CourseSchedule {
         while (!queue.isEmpty()) {
             int current = queue.poll();
             ans.add(current);
-
             if (adj[current] != null) {
                 for (int next : adj[current]) {
                     indegree[next]--;
@@ -39,5 +43,4 @@ public class CourseSchedule {
         }
         return ans.size() == n;
     }
-
 }
