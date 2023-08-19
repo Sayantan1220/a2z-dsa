@@ -45,6 +45,9 @@ adds it to the answer list ans, marks it as visited in the hash set s, and retur
 After all the courses have been visited, the findOrder method creates an integer array result of size numCourses and
 copies the order of courses from the ans list to the result array.
 Finally, the findOrder method returns the result array as an 'int[]' array by coverting ArrayList into int[].
+
+TC : O(N^2)
+SC : O(N^2)
  */
 
 package graph;
