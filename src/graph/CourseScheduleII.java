@@ -1,5 +1,10 @@
 package graph;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+
 public class CourseScheduleII {
     public List<Integer> ans = new ArrayList<>();
     boolean flag = true;
@@ -13,10 +18,9 @@ public class CourseScheduleII {
             hs.get(c).add(prereqCourse);
         }
         for (int i = 0; i < numCourses; i++) {
-            if (!s.contains(i)) {
-                if (!dfs(s, i, hs, new HashSet<>())) {
+            if (!s.contains(i) && (!dfs(s, i, hs, new HashSet<>()))) {
                     return new int[]{};
-                }
+
             }
         }
         int[] result = new int[numCourses];
