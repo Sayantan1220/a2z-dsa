@@ -4,7 +4,7 @@ public class NumberOperationsMakeNetworkConnected {
     public int makeConnected(int n, int[][] roads) {
         if(roads.length<n-1)
             return -1;
-        int parent[] =  new int[n];
+        int[] parent =  new int[n];
         for(int i=0; i<n; i++){
             parent[i]=i;
         }
@@ -23,7 +23,6 @@ public class NumberOperationsMakeNetworkConnected {
         if(find(i, parent)!=find(j, parent)){
             parent[parent[j]] = parent[i];
         }
-
     }
 
     private int find(int i, int[] parent) {
