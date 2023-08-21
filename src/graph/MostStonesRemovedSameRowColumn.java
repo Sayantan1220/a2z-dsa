@@ -1,5 +1,8 @@
 package graph;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MostStonesRemovedSameRowColumn {
     public int removeStones(int[][] stones) {
         if (stones == null || stones.length <= 1) {
