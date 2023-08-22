@@ -1,3 +1,12 @@
+/*
+You are given the root of a binary search tree (BST),
+where the values of exactly two nodes of the tree were swapped by mistake.
+Recover the tree without changing its structure.
+https://leetcode.com/problems/recover-binary-search-tree/description/
+
+
+ */
+
 package binary_search;
 
 public class RecoverBinarySearchTree {
@@ -19,7 +28,6 @@ public class RecoverBinarySearchTree {
     public void recoverTree(TreeNode root) {
         helper(root);
         swap(first , sec);
-        return;
     }
 
     private void swap (TreeNode a , TreeNode b){
