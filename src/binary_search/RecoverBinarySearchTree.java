@@ -4,7 +4,13 @@ where the values of exactly two nodes of the tree were swapped by mistake.
 Recover the tree without changing its structure.
 https://leetcode.com/problems/recover-binary-search-tree/description/
 
+Approach:
+We will traverse the tree in inorder fashion and check whether previous node had value less than the root.
+If yes, than note both of them.
+After the traversal we will simply, swap both the nodes.
 
+TC : O(n)
+SC : O(n)
  */
 
 package binary_search;
