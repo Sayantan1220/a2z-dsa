@@ -1,6 +1,20 @@
 package binary_search;
 
 public class InsertBinarySearchTree {
+
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+    }
+
     public TreeNode insertIntoBST(TreeNode root, int val) {
 
         // if the root is null, create a new node with the given value
