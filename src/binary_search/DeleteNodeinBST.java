@@ -5,6 +5,23 @@ Basically, the deletion can be divided into two stages:
 Search for a node to remove.
 If the node is found, delete the node.
 https://leetcode.com/problems/delete-node-in-a-bst/description/
+
+Approach
+If the root is null, it means the tree is empty, so we return null as there is nothing to delete.
+If the key we want to delete is less than the root's value, we recursively call the deleteNode function on the left subtree.
+This ensures that we traverse the left side of the tree to find the node with the key to be deleted.
+If the key is greater than the root's value, we recursively call the deleteNode function on the right subtree.
+This ensures that we traverse the right side of the tree to find the node with the key to be deleted.
+If the key is equal to the root's value, we have found the node to be deleted. We handle three cases:
+If the node has no left child, we return its right child, effectively replacing the node with its right child.
+If the node has no right child, we return its left child, effectively replacing the node with its left child.
+If the node has both left and right children, we find the minimum value in its right subtree
+(the leftmost node in the right subtree) and replace the value of the current node with that minimum value.
+Then, we recursively delete that minimum node from the right subtree.
+Finally, we return the root of the modified tree.
+
+TC : O(logN)
+SC : O(logN)
  */
 
 package binary_search;
