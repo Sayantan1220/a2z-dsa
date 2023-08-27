@@ -1,6 +1,20 @@
 package binary_search;
 
 public class BinarySearchTreeIterator {
+
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+    }
+
     Stack<TreeNode> stack;
     public BSTIterator(TreeNode root) {
         stack = new Stack<>();
