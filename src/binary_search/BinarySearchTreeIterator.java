@@ -11,6 +11,14 @@ the first call to next() will return the smallest element in the BST.
 You may assume that next() calls will always be valid. That is, there will be at least a next number
 in the in-order traversal when next() is called.
 https://leetcode.com/problems/binary-search-tree-iterator/description/
+
+Approach :
+1. Brute force way - You can do in-order traversal and put each element into an ArrayList (additional space).
+	Then use that to check hasNext() or next() element. However, that approach will use extra space of O(n).
+2. This approach:
+	a) Here we will use our own Stack (basically do in-order traversal Iteratively, instead of recursively).
+	   Reason, being we have more control here and no need to use extra space of O(n) for ArrayList to store all elements first.
+	b) We get space of O(h) only instead of O(n). [h: is height of tree]
  */
 
 package binary_search;
