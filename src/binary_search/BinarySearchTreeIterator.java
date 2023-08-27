@@ -1,5 +1,7 @@
 package binary_search;
 
+import java.util.Stack;
+
 public class BinarySearchTreeIterator {
 
     public class TreeNode {
@@ -16,19 +18,21 @@ public class BinarySearchTreeIterator {
     }
 
     Stack<TreeNode> stack;
-    public BSTIterator(TreeNode root) {
+    public void BSTIterator(TreeNode root) {
         stack = new Stack<>();
-        TreeNode node = root;
-        updateStack(node);                                      // update stack
+        updateStack(root);                                      // update stack
     }
+
     public int next() {
         TreeNode toRemove = stack.pop();
         updateStack(toRemove.right);                             // before return node, first update stack further
         return toRemove.val;
     }
+
     public boolean hasNext() {
         return !stack.isEmpty();
     }
+
     // -------------------
     public void updateStack(TreeNode node){
         while(node != null){
