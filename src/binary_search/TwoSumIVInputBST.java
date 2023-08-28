@@ -30,7 +30,6 @@ public class TwoSumIVInputBST {
                 while(temp.right!=null && temp.right!=curr){
                     temp=temp.right;
                 }
-
                 if(temp.right==curr){
                     temp.right=null;
                     curr=curr.right;
