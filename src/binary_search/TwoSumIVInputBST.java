@@ -1,6 +1,19 @@
 package binary_search;
 
 public class TwoSumIVInputBST {
+
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+    }
     public boolean findTarget(TreeNode root, int k) {
         Set<Integer> hs=new HashSet<>();
         TreeNode curr=root;
