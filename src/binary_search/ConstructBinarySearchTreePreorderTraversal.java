@@ -7,6 +7,10 @@ A binary search tree is a binary tree where for every node, any descendant of No
 left has a value strictly less than Node.val, and any descendant of Node.right has a value strictly greater than Node.val.
 A preorder traversal of a binary tree displays the value of the node first, then traverses Node.left,
 then traverses Node.right.
+https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
+
+TC : O(N)
+SC : O(N)
  */
 
 package binary_search;
