@@ -7,6 +7,15 @@ from the leftmost column and ending on the rightmost column. There may be multip
 In such a case, sort these nodes by their values.
 Return the vertical order traversal of the binary tree.
 https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/description/
+
+Approach:
+As y is increasing from left to right, we keep a TreeMap to handle y coordinates and further add x cordinate using
+another TreeMap, now as there can be a case where there are more than 1 element in that coordinate
+so we use a PriorityQueue to handle the sorted order which is being asked in the question. now just simple traverse
+through our data structure and store all the values in List
+
+TC : O(n)
+SC : O(n)
  */
 
 package binary_tree;
