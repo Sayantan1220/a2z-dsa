@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 public class VerticalOrderTraversalBinaryTree {
 
-    public class TreeNode {
+    public static class TreeNode {
       int val;
       TreeNode left;
       TreeNode right;
@@ -41,7 +41,7 @@ public class VerticalOrderTraversalBinaryTree {
             return;
         }
         map.putIfAbsent(y,new TreeMap<>());
-        map.get(y).putIfAbsent(x,new PriorityQueue<Integer>());
+        map.get(y).putIfAbsent(x,new PriorityQueue<>());
         map.get(y).get(x).add(root.val);
         helper(root.left,x+1,y-1,map);
         helper(root.right,x+1,y+1,map);
