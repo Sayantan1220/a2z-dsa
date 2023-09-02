@@ -2,6 +2,19 @@ package binary_tree;
 
 public class BinaryTreeMaximumPathSum {
 
+    public class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+      TreeNode(int val, TreeNode left, TreeNode right) {
+          this.val = val;
+          this.left = left;
+          this.right = right;
+      }
+    }
+
     public int maxPathSum(TreeNode root) {
         maxSum = Integer.MIN_VALUE;
         gainFromSubtree(root);
@@ -15,7 +28,6 @@ public class BinaryTreeMaximumPathSum {
         if (root == null) {
             return 0;
         }
-
         // add the path sum from left subtree. Note that if the path
         // sum is negative, we can ignore it, or count it as 0.
         // This is the reason we use `Math.max` here.
