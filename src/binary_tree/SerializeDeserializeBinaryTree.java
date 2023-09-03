@@ -1,5 +1,9 @@
 package binary_tree;
 
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.Queue;
+
 public class SerializeDeserializeBinaryTree {
 
     public class TreeNode {
@@ -36,7 +40,7 @@ public class SerializeDeserializeBinaryTree {
             }
 
             // Append the value of the current node to the serialized string
-            res.append(node.val + " ");
+            res.append(node.val).append(" ");
 
             // Add the left and right children of the current node to the queue
             q.add(node.left);
@@ -51,7 +55,7 @@ public class SerializeDeserializeBinaryTree {
     public TreeNode deserialize(String data) {
 
         // If the data string is empty, return null
-        if(data == ""){
+        if(Objects.equals(data, "")){
             return null;
         }
 
@@ -59,7 +63,7 @@ public class SerializeDeserializeBinaryTree {
         Queue<TreeNode> q = new LinkedList<>();
 
         // Split the data string into an array of values
-        String values[] = data.split(" ");
+        String[] values = data.split(" ");
 
         // Create the root node of the tree using the first value in the array
         TreeNode root = new TreeNode(Integer.parseInt(values[0]));
